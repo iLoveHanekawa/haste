@@ -34,7 +34,7 @@ function Buttons(props: ButtonsPropsType) {
     }
 
     return (
-    <div className = 'w-80 flex justify-center gap-1 md:justify-between md:gap-0 items-center mt-5'>
+    <div className = 'w-80 md:w-96 flex justify-center gap-1 md:justify-between md:gap-0 items-center mt-5'>
         <button className = 'btn bg-purple-300 w-7/12 md:w-8/12 text-white rounded-l-full' onClick = {() => {
             props.setFields(i => {
             return [...i, { text: '' }]
