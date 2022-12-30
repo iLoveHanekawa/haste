@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Amita:wght@400;700&family=Croissant+One&family=Inter:wght@400;600;700&family=Kaushan+Script&family=Nunito:wght@400;600;700&family=Pacifico&family=Poppins:wght@400;600;700&family=Redressed&family=Roboto:wght@400;700&family=Sofia&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn {
+    @apply tracking-wider hover:scale-105 duration-500 transition py-2 px-4
+}
