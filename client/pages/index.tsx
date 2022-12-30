@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <>
       <div className = 'relative font-poppins flex flex-col items-center h-screen overflow-x-hidden scrollbar-thin scrollbar-thumb-rounded-full scrollbar-thumb-cyan-400'>
-        <GiSpeedometer className = 'absolute top-1/2 left-1/2 text-vvl text-cyan-300 opacity-25 -translate-x-1/2 -translate-y-1/2 -z-10 scale-150' />
+        <GiSpeedometer className = 'absolute top-1/2 left-1/2 text-vvl text-cyan-300 opacity-20 -translate-x-1/2 -translate-y-1/2 -z-10 scale-90 md:scale-150' />
         <NavBar /> 
         <Hero />
         <Form fields = {fields} setFields = {setFields}/>
