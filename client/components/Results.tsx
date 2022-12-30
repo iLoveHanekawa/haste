@@ -34,11 +34,11 @@ function Results(props: ResultsPropsType) {
                 notify()
                 }}><VscCopy className = 'text-lg' />Copy</button>
                 <div className = 'flex gap-2'>    
-                    <a className = 'text-xxs md:text-xs rounded-l-full bg-amber-400 tracking-wider hover:scale-105 duration-500 transition flex items-end mb-1 gap-1 text-white py-1 px-3 md:py-2 md:px-4' href={`data:text/json;chatset=utf-8,${encodeURIComponent(
+                    <a className = 'text-xxs md:text-xs rounded-l-full bg-amber-400 tracking-wider font-bold hover:scale-105 duration-500 transition flex items-center mb-1 gap-1 text-white py-1 px-3 md:py-2 md:px-4' href={`data:text/json;chatset=utf-8,${encodeURIComponent(
                         JSON.stringify(JSON.parse((props.data as string).replace(/\r?\n|\r/g, '')))
                         )}`} download = 'data.json'><VscJson className = 'text-lg' />JSON
                     </a>
-                    <button className = 'text-xxs md:text-xs rounded-r-full flex items-end mb-1 tracking-wider hover:scale-105 duration-500 transition gap-1 text-white md:py-2 md:px-4 py-1 px-3 bg-red-300' onClick = {() => {
+                    <button className = 'text-xxs md:text-xs rounded-r-full flex items-center font-bold mb-1 tracking-wider hover:scale-105 duration-500 transition gap-1 text-white md:py-2 md:px-4 py-1 px-3 bg-red-300' onClick = {() => {
                         const data = JSON.parse(props.data as string) 
                         downloadExcel(data[props.fields[0].text] as [])}}><RiFileExcel2Line className = 'text-lg' />EXCEL
                     </button>
