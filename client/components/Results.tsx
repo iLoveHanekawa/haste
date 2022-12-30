@@ -1,6 +1,6 @@
 import React from 'react'
 import SyntaxHighlighter from 'react-syntax-highlighter';
-// import { anOldHope } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
+import { anOldHope } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
 import { ToastContainer, toast } from 'react-toastify';
 import { VscCopy, VscJson } from 'react-icons/vsc'
 import 'react-toastify/dist/ReactToastify.css';
@@ -44,7 +44,7 @@ function Results(props: ResultsPropsType) {
                     </button>
                 </div>
             </div>
-            <SyntaxHighlighter showLineNumbers = {true} language="javascript" >
+            <SyntaxHighlighter showLineNumbers = {true} language="javascript" style = {anOldHope}>
             {`${props.data}`}
             </SyntaxHighlighter>
             <ToastContainer />
