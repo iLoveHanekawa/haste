@@ -36,7 +36,8 @@ module.exports = {
         nunito: 'Nunito, sans-serif',
         inter: 'Inter, sans-serif',
         poppins: 'Poppins, sans-serif',
-        roboto: 'Roboto, sans-serif'
+        roboto: 'Roboto, sans-serif',
+        pacifico: 'Pacifico, cursive'
       }
     },
   },
