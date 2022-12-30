@@ -33,7 +33,7 @@ function Results(props: ResultsPropsType) {
                 navigator.clipboard.writeText(`${props.data}`)
                 notify()
                 }}><VscCopy className = 'text-lg' />Copy</button>
-                <div className = 'flex gap-2'>    
+                <div className = 'flex gap-1'>    
                     <a className = 'text-xxs md:text-xs rounded-l-full bg-amber-400 tracking-wider font-bold hover:scale-105 duration-500 transition flex items-center mb-1 gap-1 text-white py-1 px-3 md:py-2 md:px-4' href={`data:text/json;chatset=utf-8,${encodeURIComponent(
                         JSON.stringify(JSON.parse((props.data as string).replace(/\r?\n|\r/g, '')))
                         )}`} download = 'data.json'><VscJson className = 'text-lg' />JSON
