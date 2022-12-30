@@ -7,7 +7,7 @@ type ButtonsPropsType = {
         text: string;
     }[]>>
     fields: { text: string }[]
-    setData: React.Dispatch<React.SetStateAction<[] | string>>
+    setData: React.Dispatch<React.SetStateAction<string>>
     setLoading: React.Dispatch<React.SetStateAction<boolean>>
 }
 

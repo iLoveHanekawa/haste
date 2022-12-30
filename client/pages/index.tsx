@@ -7,11 +7,8 @@ import Results from "../components/Results"
 
 export default function Home() {
   
-  const [fields, setFields] = React.useState<{ text: string }[]>([{ text: '' }])
-  const [data, setData] = React.useState<string | []>(`Example: 
-  Try entering 'Plants' in the 'Category' field. 
-  Add another parameter with the key 'Fruit taste'. 
-  Press 'Get JSON' to see the response object.`)
+  const [fields, setFields] = React.useState<{ text: string }[]>([{ text: 'Instructions' }])
+  const [data, setData] = React.useState<string>('{\n    \"Instructions\": [\n        {\n            \"Example\": \"Try entering Plants in the Category field. Add another parameter with the key Fruit taste.Press Get JSON to see the response object.\"\n        }\n    ]\n}')
   const [loading, setLoading] = React.useState<boolean>(false)
 
   return (
@@ -21,7 +18,7 @@ export default function Home() {
         <Hero />
         <Form fields = {fields} setFields = {setFields}/>
         <Buttons setLoading = {setLoading} setData = {setData} fields = {fields} setFields={setFields} />
-        <Results loading = {loading} data = {data} />
+        <Results fields = {fields} loading = {loading} data = {data} />
       </div>
     </>
   )

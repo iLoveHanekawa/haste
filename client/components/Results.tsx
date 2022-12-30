@@ -1,6 +1,6 @@
 import React from 'react'
 import SyntaxHighlighter from 'react-syntax-highlighter';
-// import { anOldHope } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+// import { anOldHope } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
 import { ToastContainer, toast } from 'react-toastify';
 import { VscCopy, VscJson } from 'react-icons/vsc'
 import 'react-toastify/dist/ReactToastify.css';
@@ -9,8 +9,9 @@ import Loading from './Loading';
 import { RiFileExcel2Line } from 'react-icons/ri'
 
 type ResultsPropsType = {
-    data: string | []
+    data: string
     loading: boolean
+    fields: { text: string }[]
 }
 
 function Results(props: ResultsPropsType) {
@@ -39,7 +40,7 @@ function Results(props: ResultsPropsType) {
                     </a>
                     <button className = 'text-xs rounded-r-full flex items-end mb-1 tracking-wider hover:scale-105 duration-500 transition gap-1 text-white py-2 px-4 bg-red-300' onClick = {() => {
                         const data = JSON.parse(props.data as string) 
-                        downloadExcel(data.Plants as [])}}><RiFileExcel2Line className = 'text-lg' />Download EXCEL
+                        downloadExcel(data[props.fields[0].text] as [])}}><RiFileExcel2Line className = 'text-lg' />Download EXCEL
                     </button>
                 </div>
             </div>

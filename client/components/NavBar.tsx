@@ -9,7 +9,7 @@ function NavBar() {
             <GiSpeedometer className = 'text-2xl md:text-3xl lg:text-4xl' />
             <div>Haste</div>
         </div>
-        <a className = 'cursor-pointer' href='https://github.com/iLoveHanekawa/haste'>
+        <a target={'_blank'} className = 'cursor-pointer' href='https://github.com/iLoveHanekawa/haste'>
             <AiFillGithub className = 'text-2xl md:text-3xl lg:text-4xl' />
         </a>
     </nav>
