@@ -24,7 +24,7 @@ function Form(props: FormPropsType) {
         <form>
             {props.fields.map((i, index) => {
             return <div className = 'flex flex-col' key = {index}>
-                <label className = 'text-xs text-cyan-400' htmlFor={`id${index}`}>{`${index === 0? 'Category': `Parameter ${index}`}`}</label>
+                <label className = 'text-xxs md:text-xs text-cyan-400' htmlFor={`id${index}`}>{`${index === 0? 'Category': `Parameter ${index}`}`}</label>
                 <div className = 'flex gap-1 mb-2'>
                     <input className = 'border-teal-200 py-2 border-2 focus:outline-none text-teal-500 text-sm w-64 md:w-80 md:text-md rounded-sm indent-2' onChange = {(e) => {
                         inputHandler(e, index)
